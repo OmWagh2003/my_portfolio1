@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --color-ai-purple: var(--ai-purple);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+}
+
+:root {
+  --background: #050505;
+  --foreground: #f3f4f6;
+  --accent: #9D4EDD;
+  --secondary: #9ca3af;
+  --ai-purple: #9D4EDD;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.mixed-blend {
+  mix-blend-mode: difference;
+}
