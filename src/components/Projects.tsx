@@ -124,12 +124,20 @@ export const Projects = () => {
     }, []);
 
     return (
-        <section id="projects" ref={containerRef} className="h-auto md:h-screen w-full overflow-hidden bg-[#050505] border-t border-gray-900">
-            <div ref={wrapperRef} className="flex flex-col md:flex-row h-auto md:h-full w-full md:w-[300vw]">
+        <section id="projects" ref={containerRef} className="h-auto md:h-screen w-full flex flex-col overflow-hidden bg-[#050505] border-t border-gray-900 relative">
+            
+            {/* Section Title */}
+            <div className="w-full shrink-0 pt-16 px-6 md:pt-16 md:px-24 z-50">
+                <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white capitalize">
+                    Projects<span className="text-[#9D4EDD]">.</span>
+                </h2>
+            </div>
+
+            <div ref={wrapperRef} className="flex flex-col md:flex-row h-auto flex-1 w-full md:w-[300vw]">
                 {aiProjects.map((project, i) => (
                     <div
                         key={project.id}
-                        className="project-panel min-h-[100svh] md:h-screen w-full md:w-screen flex-shrink-0 flex items-center justify-center py-20 px-6 md:p-12 lg:p-24 relative overflow-hidden"
+                        className="project-panel h-auto md:h-full w-full md:w-screen flex-shrink-0 flex items-center justify-center py-12 px-6 md:p-12 lg:p-24 relative overflow-hidden"
                     >
                         {/* Background Accent */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">

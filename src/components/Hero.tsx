@@ -92,17 +92,17 @@ export const Hero = () => {
             {/* Hero Image Background */}
             <div
                 ref={imageRef}
-                className="absolute inset-0 z-0 h-full w-full opacity-90 overflow-hidden"
+                className="absolute inset-0 z-0 h-full w-full overflow-hidden"
             >
                 <Image
                     src="/hero.jpg"
                     alt="Om Wagh Hero Background"
                     fill
-                    className="object-cover object-center md:object-[center_-10%]"
+                    className="object-cover scale-100"
+                    style={{ objectPosition: "60% 5%" }}
                     priority
                 />
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050505] via-transparent to-transparent pointer-events-none" />
-                <div className="absolute inset-0 bg-[#050505]/10 pointer-events-none" />
             </div>
 
             {/* Subtle Data/Grid Background */}
