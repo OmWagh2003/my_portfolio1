@@ -104,40 +104,29 @@ export const Experience = () => {
                     </div>
 
                     <div className="relative z-10">
-                        <h4 className="text-sm uppercase tracking-widest text-gray-500 mb-6 font-semibold">Key Responsibilities</h4>
+                        <h4 className="text-sm uppercase tracking-widest text-gray-500 mb-6 font-semibold">Key Responsibilities & Impact</h4>
                         <ul className="space-y-6 text-gray-300 leading-relaxed font-light text-md md:text-lg">
-                            <li
-                                ref={(el) => { if (el) highlightsRefs.current[0] = el; }}
-                                className="flex items-start gap-4"
-                            >
-                                <span className="text-[#9D4EDD] mt-1 shrink-0">❖</span>
-                                <p>
-                                    Leading a small team in backend development for a <strong className="text-white font-medium">mainframe systems-to-cloud native modernization tool</strong>, building robust <strong className="text-white font-medium">AI based</strong> architectures along with <strong className="text-white font-medium">Eval Pipeline.</strong>
-                                </p>
-                            </li>
-                            <li
-                                ref={(el) => { if (el) highlightsRefs.current[1] = el; }}
-                                className="flex items-start gap-4"
-                            >
-                                <span className="text-[#9D4EDD] mt-1 shrink-0">❖</span>
-                                <p>
-                                    Developed an advanced <strong className="text-white font-medium">"chat with document"</strong> system using LLMs, enabling natural-language interaction with complex mainframe code comprehension across 6 specific code types.
-                                </p>
-                            </li>
-                            <li
-                                ref={(el) => { if (el) highlightsRefs.current[2] = el; }}
-                                className="flex items-start gap-4"
-                            >
-                                <span className="text-[#9D4EDD] mt-1 shrink-0">❖</span>
-                                <p>
-                                    Curently a part of first phase i.e legacy mainframe to technical and business level comprehnsion where our <strong className="text-white font-medium">comprehnsions have achived 90-95% accuracy</strong> and developing new features and handling client apps on daily basis .
-                                </p>
-                            </li>
+                            {[
+                                <>Leading a team in backend development for a <strong className="text-white font-medium">mainframe system to cloud-native modernization tool</strong>, building robust AI-based architectures along with an Eval Pipeline.</>,
+                                <>Built <strong className="text-white font-medium">AI-powered conversational chat interfaces</strong> for querying 6+ legacy mainframe code types (COBOL, JCL, etc.) using LLMs (Gemini, Claude) with semantic search and conversation memory—enabling 50+ engineers to understand legacy systems through natural language.</>,
+                                <>Designed an <strong className="text-white font-medium">SME Feedback & Regeneration system</strong> allowing Subject Matter Experts to review, annotate, and trigger re-generation of specific sections of AI-produced documentation—improving output accuracy by <strong className="text-[#9D4EDD] font-bold">~35%</strong> over iterative cycles.</>,
+                                <>Engineered <strong className="text-white font-medium">production-grade COBOL & JCL parsers</strong> handling 15+ edge cases including dynamic call resolution and database entity detection (DB2, IMS, IDMS)—achieving <strong className="text-white font-medium">95%+ parsing accuracy</strong> across 500+ enterprise programs.</>,
+                                <>Developed analytics dashboards and reporting APIs for LoC analysis, orphan code detection, and real-time job tracking—providing visibility across <strong className="text-white font-medium">10K+ programs</strong> and enabling data-driven migration prioritization.</>
+                            ].map((point, index) => (
+                                <li
+                                    key={index}
+                                    ref={(el) => { if (el) highlightsRefs.current[index] = el; }}
+                                    className="flex items-start gap-4"
+                                >
+                                    <span className="text-[#9D4EDD] mt-1 shrink-0">❖</span>
+                                    <p>{point}</p>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     <div className="relative z-10 mt-10 flex flex-wrap gap-3">
-                        {["Python", "FastAPI", "Prompt Engineering", "LLM Models"].map((tech, i) => (
+                        {["Python", "FastAPI", "Prompt Engineering", "LLM Models", "ElasticSearch", "VectorDB"].map((tech, i) => (
                             <span key={i} className="px-3 py-1 bg-[#111] text-xs font-mono text-gray-400 border border-gray-800 rounded-md">
                                 {tech}
                             </span>

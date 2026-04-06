@@ -98,11 +98,11 @@ export const Hero = () => {
                     src="/hero.jpg"
                     alt="Om Wagh Hero Background"
                     fill
+                    quality={100}
                     className="object-cover scale-100"
                     style={{ objectPosition: "60% 5%" }}
                     priority
                 />
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#050505] via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Subtle Data/Grid Background */}
@@ -114,21 +114,24 @@ export const Hero = () => {
                     backgroundSize: "40px 40px"
                 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050505] pointer-events-none" />
 
             {/* Top Nav */}
-            <div className="absolute top-8 left-0 w-full flex justify-between px-10 md:px-24 z-20 text-sm font-sans mix-blend-difference">
-                <div className="flex flex-col">
+            <div className="absolute top-8 left-0 w-full flex justify-between items-start px-10 md:px-24 z-20 text-sm font-sans mix-blend-difference">
+                <div className="flex flex-col mt-0.5">
                     <span className="text-gray-400">Available for Work</span>
                     <a href="#contact" className="font-medium text-white tracking-widest uppercase text-xs mt-1 underline hover:text-[#9D4EDD] transition-colors">Let&apos;s Talk</a>
                 </div>
-                <div className="hidden md:flex gap-8">
+                <div className="hidden md:flex gap-8 pt-1.5">
                     <a href="#experience" className="text-gray-400 hover:text-white transition-colors">Experience</a>
                     <a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projects</a>
                     <a href="#education" className="text-gray-400 hover:text-white transition-colors">Education</a>
                 </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/om-wagh-953007235/" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-white hover:text-[#9D4EDD] transition-colors relative group">
+                <div className="flex items-start gap-6">
+                    <a href="/Om_Wagh_Resume_updated1.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-1.5 bg-[#9D4EDD]/20 border border-[#9D4EDD]/60 rounded-full text-white hover:bg-[#9D4EDD]/30 hover:border-[#9D4EDD] transition-all duration-300 shadow-[0_0_15px_rgba(157,78,221,0.3)] hover:shadow-[0_0_25px_rgba(157,78,221,0.6)]">
+                        <span className="text-sm">📄</span>
+                        <span className="font-medium tracking-widest uppercase text-[10px] mt-[1px]">View Resume</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/om-wagh-953007235/" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-white hover:text-[#9D4EDD] transition-colors relative group pt-1.5">
                         <span className="relative z-10">LinkedIn</span>
                         <MoveUpRight size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
